@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=Ropa+Sans");
+
+.error {
+  color: #ff0000;
+}
+
+header {
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Ropa Sans";
+  text-shadow: 3px 3px 3px black;
+  text-transform: uppercase;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  padding-left: 15px;
+  font-size: 25px;
+  color: black;
+}
+
+nav {
+  font-size: 20px;
+  text-align: end;
+}
+
+nav a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.leermas {
+  color: red;
+  text-decoration: none;
+}
+
+.historial {
+  color: black;
+  text-decoration: none;
+}
+
+aside {
+  margin-right: 10px;
+}
+
+#registro {
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  text-shadow: 1px 1px;
+  margin-top: 30px;
+  width: 50%;
+  background: rgba(192, 192, 192, 0.5);
+  border-radius: 3px;
+}
+
+#entradas {
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 30px;
+  width: 50%;
+  background: rgba(192, 192, 192, 0.788);
+  border-radius: 3px;
+}
+
+.comentarios {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Ropa Sans";
+  color: black;
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#moderacion {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#moderacion td,
+#moderacion th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#moderacion tr:hover {
+  background-color: #ddd;
+}
+
+#moderacion th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: red;
+  color: white;
+}
+
+a.noticias {
+  text-decoration: none;
+  color: black;
+}
+
+a.noticias:hover {
+  font-weight: bold;
+}
+
+.encabezado {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.titulos {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  color: red;
+  text-shadow: 2px 2px #000000;
+}
+
+.titulos a {
+  text-decoration: none;
+  color: red;
+}
+
+.titulos a:hover {
+  text-decoration: none;
+  color: rgb(126, 0, 0);
+}
+
+.cuerpo {
+  font-size: 18px;
+}
+
+#cuerpo {
+  display: none;
+}
+
+input[type="text"]#entrada {
+  color: black;
+  width: 60%;
+  font-family: "Ropa Sans";
+  padding: 5px;
+  margin: 2px 0 15px 0;
+  display: block;
+}
+
+textarea#entrada {
+  resize: none;
+  color: black;
+  width: 60%;
+  font-family: "Ropa Sans";
+  padding: 5px;
+  margin: 2px 0 15px 0;
+  display: block;
+}
+
+input[type="text"]#login,
+input[type="password"]#login {
+  color: black;
+  width: 15%;
+  font-family: "Ropa Sans";
+  padding: 5px;
+  margin: 2px 0 15px 0;
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  -webkit-transition: border-color 0.6s;
+  border-bottom: 2px solid grey;
+}
+
+input[type="text"]#login:focus,
+input[type="password"]:focus {
+  font-family: "Ropa Sans";
+  border: 0;
+  outline: 0;
+  -webkit-transition: border-color 0.6s;
+  background: transparent;
+  border-bottom: 2px solid red;
+}
+
+input[type="submit"] {
+  background-color: red;
+  color: white;
+  padding: 15px;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#barraBusqueda {
+  background-color: lightgray;
+  text-align: center;
+  margin: auto;
+}
+
+#btnBuscar {
+  width: 5%;
+  background-color: red;
+  color: white;
+  padding: 5px 5px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#derecha {
+  float: right;
+  width: 15%;
+  padding: 20px;
+}
