@@ -27,8 +27,10 @@ if (isset($_SESSION['usuario'])) {
 
 </header>
             <div id="barraBusqueda">
+            <form name="input" action="buscarEntradas.php" method="post">
             Barra de busqueda<input type="text" name="busqueda" id="busqueda">
             <input type="radio" name="todas" id="todas">Todas las palabras <input type="radio" name="alguna" id="alguna" checked="checked">Alguna palabra <input type="submit" value="Buscar" id="btnBuscar">
+            </form>
             </div>
 
 

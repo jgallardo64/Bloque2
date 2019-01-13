@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -14,7 +13,8 @@ require_once 'header.php';
 require 'aside.php';
 ?>
 
-    <body>
+    <body>       
+
         <div id="entradas">
 
             <?php
@@ -24,7 +24,7 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-$resultado = $conexion->query('SELECT E.idEntrada, DAY(E.fechaPublicacion), MONTH(E.fechaPublicacion), YEAR(E.fechaPublicacion), HOUR(E.fechaPublicacion), MINUTE(E.fechaPublicacion), U.nombreUsuario, E.etiquetas, E.titulo, E.cuerpo FROM entradas E, usuarios U WHERE E.autor=U.idUsuario AND YEAR(E.fechaPublicacion)=' . $_GET['year'] . ' AND MONTH(E.fechaPublicacion)=' . $_GET['month'] . ' ORDER BY E.idEntrada DESC');
+$resultado = $conexion->query('SELECT E.idEntrada, DAY(E.fechaPublicacion), MONTH(E.fechaPublicacion), YEAR(E.fechaPublicacion), HOUR(E.fechaPublicacion), MINUTE(E.fechaPublicacion), U.nombreUsuario, E.etiquetas, E.titulo, E.cuerpo FROM entradas E, usuarios U WHERE E.autor=U.idUsuario AND E.cuerpo LIKE \'%'.$_POST['busqueda'].'%\'');
 
 $contadorNoticias = 0;
 
