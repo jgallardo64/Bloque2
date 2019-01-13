@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-01-2019 a las 17:10:55
+-- Tiempo de generación: 13-01-2019 a las 20:31:05
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -92,7 +92,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idUsuario`, `nombreUsuario`, `pass`, `fechaRegistro`, `avatar`, `avatarGrande`, `nombre`, `apellidos`, `admin`) VALUES
-(1, 'jgallardo', '39d075ad7ff71d6426a797e5e557021b', '2019-01-08', 'subidas/avatar_jgallardo.jpg_Small.jpg', 'subidas/avatar_jgallardo.jpg', 'Jorge', 'Gallardo', 1),
+(1, 'jgallardo', '21232f297a57a5a743894a0e4a801fc3', '2019-01-08', 'subidas/avatar_jgallardo.jpg_Small.jpg', 'subidas/avatar_jgallardo.jpg', 'Jorge', 'Gallardo', 1),
 (27, 'userblog', '298d682e145031bbae7b114610222544', '2019-01-13', 'subidas/avatar_userblog.png_Small.png', 'subidas/avatar_userblog.png', 'Daniel', 'Godoy', 1);
 
 --
@@ -129,7 +129,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `idComentario` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idComentario` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `entradas`
@@ -141,7 +141,7 @@ ALTER TABLE `entradas`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUsuario` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `idUsuario` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas
