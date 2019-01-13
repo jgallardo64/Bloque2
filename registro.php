@@ -13,7 +13,7 @@
         <?php
 require_once 'header.php';
 ?>
-        <div id="registro" align="center">
+       <div id="registro" align="center">
             <?php
 
 try {
@@ -45,8 +45,7 @@ if ($_POST) {
 }
 
 if (!$_POST || $errores > 0) {
-    echo
-        "<form name=\"input\" name=\"login\" action=\"registroCorrecto.php\" method=\"post\" enctype=\"multipart/form-data\">
+    echo "<form name=\"input\" name=\"login\" action=\"registroCorrecto.php\" method=\"post\" enctype=\"multipart/form-data\">
             <span class=\"error\">* Campos requeridos</span><br><br>
             Nombre: <input type=\"text\" name=\"nombre\" id=\"login\" value=\"$nombre\">
             <span class=\"error\">*" . $errorNombre . "</span><br><br>
@@ -64,7 +63,7 @@ if (!$_POST || $errores > 0) {
             </form></div>";
 }
 ?>
-        </div>
+       </div>
     </body>
 
 </html>

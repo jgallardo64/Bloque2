@@ -53,7 +53,7 @@ if (isset($_SESSION['admin'])) {
         echo '<td>';
         echo '<a href="editarEntrada.php?id=' . $registro['idEntrada'] . '"><img src="css/edit.png" width=20></a>';
         echo ' ';
-        echo "<a onClick=\"javascript: return confirm('¿Desea borrar esta entrada?');\" href='borrarEntrada.php?id=".$registro['idEntrada']."'><img src=\"css/delete.png\" width=20></a>";
+        echo "<a onClick=\"javascript: return confirm('¿Desea borrar esta entrada?');\" href='borrarEntrada.php?id=" . $registro['idEntrada'] . "'><img src=\"css/delete.png\" width=20></a>";
         echo '</td>';
         echo '</tr>';
     }

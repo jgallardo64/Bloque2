@@ -13,7 +13,7 @@
         <?php
 require_once 'header.php';
 ?>
-        <div id="registro" align="center">
+       <div id="registro" align="center">
             <?php
 
 echo "<p><h1>El registro se ha completado con éxito<h1></p>";
@@ -24,7 +24,7 @@ $alto = $source_properties[1];
 $formato = $source_properties[2];
 
 if ($ancho > 480 || $alto > 480) {
-    print "Error: La imagen es mayor de 360x480";
+    print "Error: La imagen es mayor de 480x480";
     exit();
 }
 
@@ -32,18 +32,25 @@ if ($_FILES['imagen']['error'] != UPLOAD_ERR_OK) { // Se comprueba si hay un err
     echo 'Error: ';
     switch ($_FILES['imagen']['error']) {
         case UPLOAD_ERR_INI_SIZE:
-        case UPLOAD_ERR_FORM_SIZE:echo 'El fichero es demasiado grande';
+        case UPLOAD_ERR_FORM_SIZE:
+            echo 'El fichero es demasiado grande';
             break;
-        case UPLOAD_ERR_PARTIAL:echo 'El fichero no se ha podido subir entero';
+        case UPLOAD_ERR_PARTIAL:
+            echo 'El fichero no se ha podido subir entero';
             break;
-        case UPLOAD_ERR_NO_FILE:echo 'No se ha podido subir el fichero';
+        case UPLOAD_ERR_NO_FILE:
+            echo 'No se ha podido subir el fichero';
             break;
-        default:echo 'Error indeterminado.';
+        default:
+            echo 'Error indeterminado.';
     }
     exit();
 }
 
-$formatos = array('image/jpeg', 'image/png');
+$formatos = array(
+    'image/jpeg',
+    'image/png',
+);
 
 if (!in_array($_FILES['imagen']['type'], $formatos)) {
     echo 'Error: Formato incorrecto';
@@ -99,7 +106,7 @@ if (is_uploaded_file($_FILES['imagen']['tmp_name']) === true) { // Se comprueba 
         imagepng($target_layer, $imgSmall);
     }
 
-// Se mueve el fichero a su nueva ubicación
+    // Se mueve el fichero a su nueva ubicación
     if (!move_uploaded_file($_FILES['imagen']['tmp_name'], $nombre)) {
         echo 'Error: No se puede mover el fichero a su destino';
     }
@@ -131,7 +138,7 @@ $stmt->bindParam(8, $admin);
 $stmt->execute();
 
 ?>
-        </div>
+       </div>
     </body>
 
 </html>

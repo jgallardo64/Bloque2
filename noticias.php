@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <title>Noticia</title>
     </head>
-    <body>    
+    <body>
         <?php
 require_once 'header.php';
 ?>
@@ -63,7 +63,7 @@ while ($registro = $resultado->fetch()) {
     while ($comentario = $comentarios->fetch()) {
         echo $comentario['nombre'] . ' ' . $comentario['apellidos'] . ' el ' . $comentario['DAY(C.fechaComentario)'] . '-' . $comentario['MONTH(C.fechaComentario)'] . '-' . $comentario['YEAR(C.fechaComentario)'] . ' a las ' . $comentario['HOUR(C.fechaComentario)'] . ':' . $comentario['MINUTE(C.fechaComentario)'];
         if (isset($_SESSION['admin'])) {
-            echo "<a onClick=\"javascript: return confirm('¿Desea borrar este comentario?');\" href='borrarComentario.php?noticia=".$_GET['id']."&id=".$comentario['idComentario']."'><img src=\"css/delete.png\" width=20></a>";
+            echo "<a onClick=\"javascript: return confirm('¿Desea borrar este comentario?');\" href='borrarComentario.php?noticia=" . $_GET['id'] . "&id=" . $comentario['idComentario'] . "'><img src=\"css/delete.png\" width=20></a>";
         }
         echo '<p class="comentarios">';
         echo $comentario['cuerpo'];

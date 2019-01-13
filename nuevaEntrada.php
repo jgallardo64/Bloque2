@@ -56,5 +56,5 @@ if (isset($_SESSION['id'])) {
     echo '<div id="entradas" align="center"><h1>Esta pagina es solo accesible si estas logeado en la web</h1></div>';
 }
 ?>
-    </body>
+   </body>
 </html>

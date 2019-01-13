@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -28,28 +27,27 @@ $resultado = $conexion->query('SELECT E.idEntrada, DAY(E.fechaPublicacion), MONT
 
 $contadorNoticias = 0;
 
-    while ($registro = $resultado->fetch()) {
-        echo '<p class="encabezado">';
-        echo 'Entrada #' . $registro['idEntrada'] . ' Fecha: ' . $registro['DAY(E.fechaPublicacion)'] . '-' . $registro['MONTH(E.fechaPublicacion)'] . '-' . $registro['YEAR(E.fechaPublicacion)'] . ' ' . $registro['HOUR(E.fechaPublicacion)'] . ':' . $registro['MINUTE(E.fechaPublicacion)'];
-        echo '<br>';
-        echo 'Autor: ' . $registro['nombreUsuario'];
-        echo '<br>';
-        echo 'Etiquetas: ' . $registro['etiquetas'];
-        echo '</p>';
-        echo '<p class="titulos"><a href="noticias.php?id=' . $registro['idEntrada'] . '">' . $registro['titulo'] . '</a></p>';
-        echo '<p class="cuerpo">';
-        echo substr($registro['cuerpo'], 0, 500) . '...';
-        echo '<a href="noticias.php?id=' . $registro['idEntrada'] . '" class="leermas"> Leer mas</a>';
-        echo '</p>';
-        echo '<hr>';
+while ($registro = $resultado->fetch()) {
+    echo '<p class="encabezado">';
+    echo 'Entrada #' . $registro['idEntrada'] . ' Fecha: ' . $registro['DAY(E.fechaPublicacion)'] . '-' . $registro['MONTH(E.fechaPublicacion)'] . '-' . $registro['YEAR(E.fechaPublicacion)'] . ' ' . $registro['HOUR(E.fechaPublicacion)'] . ':' . $registro['MINUTE(E.fechaPublicacion)'];
+    echo '<br>';
+    echo 'Autor: ' . $registro['nombreUsuario'];
+    echo '<br>';
+    echo 'Etiquetas: ' . $registro['etiquetas'];
+    echo '</p>';
+    echo '<p class="titulos"><a href="noticias.php?id=' . $registro['idEntrada'] . '">' . $registro['titulo'] . '</a></p>';
+    echo '<p class="cuerpo">';
+    echo substr($registro['cuerpo'], 0, 500) . '...';
+    echo '<a href="noticias.php?id=' . $registro['idEntrada'] . '" class="leermas"> Leer mas</a>';
+    echo '</p>';
+    echo '<hr>';
 
-        $contadorNoticias++;
+    $contadorNoticias++;
 
-    }
-if ($contadorNoticias==0) {
+}
+if ($contadorNoticias == 0) {
     echo '<h1 align="center">No hay entradas que coincidan con el filtro seleccionado</h1>';
 }
-
 
 ?>
 

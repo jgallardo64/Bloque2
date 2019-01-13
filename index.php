@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -15,7 +14,7 @@ require_once 'header.php';
 require_once 'aside.php';
 ?>
 
-    <body>    
+    <body>
 
         <div id="entradas">
 
@@ -44,8 +43,6 @@ while ($registro = $resultado->fetch()) {
 }
 
 ?>
-
         </div>
-
     </body>
 </html>

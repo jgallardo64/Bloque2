@@ -14,7 +14,6 @@ try {
     $resultado = $conexion->prepare($sql);
 
     $username = htmlentities(addslashes($_POST['username']));
-
     $password = htmlentities(addslashes($_POST['passwd']));
     $password = md5($password);
     echo $password;
@@ -28,7 +27,7 @@ try {
     $id = $usuario['idUsuario'];
     $avatar = $usuario['avatar'];
     if ($usuario['admin'] == 1) {
-        $admin = $usuario['admin'];        
+        $admin = $usuario['admin'];
     }
 
     if ($registro != 0) {

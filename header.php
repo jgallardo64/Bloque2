@@ -8,7 +8,7 @@ session_start();
 
 if (isset($_SESSION['usuario'])) {
     echo '<nav>
-                <img src='.$_SESSION['avatar'].'> <a href="perfil.php?id='. $_SESSION['id'] . '"id=username>'.$_SESSION['usuario'].'</a><br>
+                <img src=' . $_SESSION['avatar'] . '> <a href="perfil.php?id=' . $_SESSION['id'] . '"id=username>' . $_SESSION['usuario'] . '</a><br>
                 <a href="index.php">Inicio</a> |
                 <a href="nuevaEntrada.php">Nueva entrada</a> | ';
     if (isset($_SESSION['admin'])) {
@@ -32,5 +32,3 @@ if (isset($_SESSION['usuario'])) {
             <input type="radio" name="todas" id="todas">Todas las palabras <input type="radio" name="alguna" id="alguna" checked="checked">Alguna palabra <input type="submit" value="Buscar" id="btnBuscar">
             </form>
             </div>
-
-

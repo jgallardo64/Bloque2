@@ -43,6 +43,6 @@ if (!$_POST) {
         </div>';
 }
 ?>
-    </body>
+   </body>
 
 </html>
