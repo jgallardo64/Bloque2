@@ -25,7 +25,7 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-$resultado = $conexion->query('SELECT E.idEntrada, DAY(E.fechaPublicacion), MONTH(E.fechaPublicacion), YEAR(E.fechaPublicacion), HOUR(E.fechaPublicacion), MINUTE(E.fechaPublicacion), U.nombreUsuario, E.etiquetas, E.titulo, E.cuerpo FROM entradas E, usuarios U WHERE E.autor=U.idUsuario ORDER BY E.idEntrada DESC LIMIT 5');
+$resultado = $conexion->query('SELECT E.idEntrada, DAY(E.fechaPublicacion), MONTH(E.fechaPublicacion), YEAR(E.fechaPublicacion), HOUR(E.fechaPublicacion), MINUTE(E.fechaPublicacion), U.nombreUsuario, E.etiquetas, E.titulo, E.cuerpo FROM entradas E, usuarios U WHERE E.autor=U.idUsuario ORDER BY E.idEntrada DESC');
 while ($registro = $resultado->fetch()) {
     echo '<p class="encabezado">';
     echo 'Entrada #' . $registro['idEntrada'] . ' Fecha: ' . $registro['DAY(E.fechaPublicacion)'] . '-' . $registro['MONTH(E.fechaPublicacion)'] . '-' . $registro['YEAR(E.fechaPublicacion)'] . ' ' . $registro['HOUR(E.fechaPublicacion)'] . ':' . $registro['MINUTE(E.fechaPublicacion)'];
