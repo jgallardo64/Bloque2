@@ -8,7 +8,7 @@ session_start();
 
 if (isset($_SESSION['usuario'])) {
     echo '<nav>
-                ' . $_SESSION['usuario'] . ' <br>
+                <img src='.$_SESSION['avatar'].'> <a href="perfil.php?id='. $_SESSION['id'] . '"id=username>'.$_SESSION['usuario'].'</a><br>
                 <a href="index.php">Inicio</a> |
                 <a href="nuevaEntrada.php">Nueva entrada</a> | ';
     if (isset($_SESSION['admin'])) {

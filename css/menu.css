@@ -36,6 +36,18 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: red;
+}
+
+#username {
+  color: white;
+}
+
+#username:hover {
+  color: red;
+}
+
 .leermas {
   color: red;
   text-decoration: none;

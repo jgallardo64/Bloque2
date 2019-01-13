@@ -10,7 +10,7 @@
 try {
     $dwes = "mysql:host=localhost;dbname=blogdwes";
     $conexion = new PDO($dwes, 'userblog', 'passblog');
-    $sql = "SELECT idUsuario, admin FROM usuarios WHERE nombreUsuario= :username AND pass= :password";
+    $sql = "SELECT idUsuario, avatar, admin FROM usuarios WHERE nombreUsuario= :username AND pass= :password";
     $resultado = $conexion->prepare($sql);
 
     $username = htmlentities(addslashes($_POST['username']));
@@ -26,8 +26,9 @@ try {
     $registro = $resultado->rowCount();
     $usuario = $resultado->fetch();
     $id = $usuario['idUsuario'];
+    $avatar = $usuario['avatar'];
     if ($usuario['admin'] == 1) {
-        $admin = $usuario['admin'];
+        $admin = $usuario['admin'];        
     }
 
     if ($registro != 0) {
@@ -35,6 +36,7 @@ try {
         $_SESSION['usuario'] = $_POST['username'];
         $_SESSION['id'] = $id;
         $_SESSION['admin'] = $admin;
+        $_SESSION['avatar'] = $avatar;
 
         header("location:index.php");
 

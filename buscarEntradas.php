@@ -50,7 +50,6 @@ if ($contadorNoticias==0) {
     echo '<h1 align="center">No hay entradas que coincidan con el filtro seleccionado</h1>';
 }
 
-
 ?>
 
         </div>
